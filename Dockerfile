@@ -2,11 +2,26 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
-# Execute during the build of the image
+# Install Python.
 ARG TEMPIO_VERSION BUILD_ARCH
 RUN \
-    curl -sSLf -o /usr/bin/tempio \
-    "https://github.com/home-assistant/tempio/releases/download/${TEMPIO_VERSION}/tempio_${BUILD_ARCH}"
+#    curl -sSLf -o /usr/bin/tempio \
+#    "https://github.com/home-assistant/tempio/releases/download/${TEMPIO_VERSION}/tempio_${BUILD_ARCH}"
+    apk add --no-cache python3 py3-pip
+
+# Download the Chambers code.
+RUN \
+    wget https://github.com/chrisgilldc/chambers/archive/refs/heads/master.zip &&\
+    unzip master.zip &&\
+    pwd &&\
+    ls
+
+# Install
+RUN \
+    pip install --break-system-packages ./chambers-master
 
 # Copy root filesystem
-COPY rootfs /
+#COPY rootfs /
+COPY run.sh /
+
+CMD [ "/run.sh" ]
