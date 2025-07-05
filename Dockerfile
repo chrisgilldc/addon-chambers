@@ -23,7 +23,6 @@ RUN \
 # Copy root filesystem
 #COPY rootfs /
 COPY run.sh /
-RUN chmod a+x /run.sh
-RUN ls -al /
+RUN chmod 555 /run.sh
 
 CMD [ "/run.sh" ]
