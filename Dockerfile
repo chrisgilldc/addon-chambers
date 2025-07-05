@@ -24,5 +24,6 @@ RUN \
 #COPY rootfs /
 COPY run.sh /
 RUN chmod a+x /run.sh
+RUN ls -al /
 
 CMD [ "/run.sh" ]
