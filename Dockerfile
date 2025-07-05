@@ -10,9 +10,7 @@ RUN \
 # Download the Chambers code.
 RUN \
     wget https://github.com/chrisgilldc/chambers/archive/refs/heads/master.zip &&\
-    unzip master.zip &&\
-    pwd &&\
-    ls
+    unzip master.zip
 
 # Install
 RUN \
