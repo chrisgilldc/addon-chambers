@@ -14,7 +14,5 @@ init: false
 startup: application
 services:
   - "mqtt:need"
-options:
-  log_level: warning
 schema:
-  log_level: list(debug,info,warning,error)
+  log_level: list(debug|info|warning|error)?
