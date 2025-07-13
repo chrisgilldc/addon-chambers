@@ -10,7 +10,7 @@ RUN \
 # Download the Chambers code.
 RUN \
     wget https://github.com/chrisgilldc/chambers/archive/refs/tags/0.1.0-alpha4.zip &&\
-    unzip 0.1.0-alpha3.zip
+    unzip 0.1.0-alpha4.zip
 
 # Install
 RUN \
