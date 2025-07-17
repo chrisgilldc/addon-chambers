@@ -9,12 +9,12 @@ RUN \
 
 # Download the Chambers code.
 RUN \
-    wget https://github.com/chrisgilldc/chambers/archive/refs/tags/0.1.0-alpha6.zip &&\
-    unzip 0.1.0-alpha6.zip
+    wget https://github.com/chrisgilldc/chambers/archive/refs/tags/0.1.0-alpha7.zip &&\
+    unzip 0.1.0-alpha7.zip
 
 # Install
 RUN \
-    pip install --break-system-packages ./chambers-0.1.0-alpha6
+    pip install --break-system-packages ./chambers-0.1.0-alpha7
 
 # Copy root filesystem
 #COPY rootfs /

@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.1.0-alpha7
+ - Bump to Chambers 0.1.0-alpha7. Removes whitespace in Senate's AM/PM indicator.
+
 ## 0.1.0-alpha6
  - Bump to Chambers 0.1.0-alpha6. Catches XML parse errors during updates and continues.
 
